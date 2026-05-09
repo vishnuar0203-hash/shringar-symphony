@@ -1,6 +1,7 @@
 import { ShoppingBag, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -29,11 +30,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
-        <a href="#home" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-[0.2em] text-champagne md:text-2xl">AVS</span>
-          <span className="text-[10px] tracking-[0.3em] text-muted-foreground md:text-xs">
-            KOLLAM · GOLD COVERING
-          </span>
+        <a href="#home" className="flex items-center gap-3">
+          <img src={logo} alt="AVS Kollam Gold Covering" className="h-10 w-auto md:h-12" />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

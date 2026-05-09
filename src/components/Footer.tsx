@@ -1,5 +1,6 @@
 import { Instagram, Facebook, MessageCircle, MapPin, Mail } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/products";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -7,12 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="mb-4 flex flex-col leading-none">
-              <span className="font-display text-3xl tracking-[0.2em] text-champagne">AVS</span>
-              <span className="text-xs tracking-[0.3em] text-muted-foreground">
-                KOLLAM · GOLD COVERING
-              </span>
-            </div>
+            <img src={logo} alt="AVS Kollam Gold Covering" className="mb-5 h-14 w-auto" />
             <p className="mb-6 max-w-md text-muted-foreground">
               South Indian elegance, crafted to shine. Bridal, temple, gold-covering and fashion jewellery
               for the women of Kerala, Tamil Nadu and beyond.
