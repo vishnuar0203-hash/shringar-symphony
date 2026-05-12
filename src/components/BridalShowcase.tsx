@@ -1,4 +1,5 @@
-import showcase from "@/assets/showcase-bridal.jpg";
+import { heroImages } from "@/lib/images";
+const showcase = heroImages.bridalShowcase;
 import { GoldParticles } from "./GoldParticles";
 import { Reveal } from "./Reveal";
 

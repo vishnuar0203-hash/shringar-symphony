@@ -5,8 +5,16 @@ import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { FeaturedCollections } from "@/components/FeaturedCollections";
 import { BridalShowcase } from "@/components/BridalShowcase";
-import { TrendingJewellery } from "@/components/TrendingJewellery";
-import { TempleJewellery } from "@/components/TempleJewellery";
+import { CollectionGallery } from "@/components/CollectionGallery";
+import {
+  bridalCollection,
+  templeCollection,
+  necklaceCollection,
+  earringsCollection,
+  banglesCollection,
+  featuredProducts,
+  newArrivalsCollection,
+} from "@/lib/images";
 import { Testimonials } from "@/components/Testimonials";
 import { InstagramGallery } from "@/components/InstagramGallery";
 import { WhatsAppOrder } from "@/components/WhatsAppOrder";
@@ -43,8 +51,74 @@ function Index() {
           <Marquee />
           <FeaturedCollections />
           <BridalShowcase />
-          <TrendingJewellery />
-          <TempleJewellery />
+
+          <CollectionGallery
+            id="bridal-collection"
+            eyebrow="Bridal Edit"
+            title="Bridal Collections"
+            subtitle="Heavy harams, layered chokers and complete bridal sets crafted for your big day."
+            items={bridalCollection}
+            columns={3}
+            tone="maroon"
+          />
+
+          <CollectionGallery
+            id="temple"
+            eyebrow="Temple Jewellery"
+            title="Sacred & Traditional"
+            subtitle="Lakshmi pendants, kemp stones and antique gold finishes inspired by South Indian temples."
+            items={templeCollection}
+            columns={3}
+          />
+
+          <CollectionGallery
+            id="necklaces"
+            eyebrow="Necklaces"
+            title="Statement Necklaces"
+            subtitle="From delicate chokers to grand harams — pieces that anchor every look."
+            items={necklaceCollection}
+            columns={3}
+            tone="maroon"
+          />
+
+          <CollectionGallery
+            id="earrings"
+            eyebrow="Earrings"
+            title="Jhumkas, Chandbalis & More"
+            subtitle="Traditional silhouettes and modern drops, finished in champagne gold."
+            items={earringsCollection}
+            columns={3}
+          />
+
+          <CollectionGallery
+            id="bangles"
+            eyebrow="Bangles & Kadas"
+            title="Wrists Worth Adoring"
+            subtitle="Antique kadas, daily-wear bangles and bridal sets in luxe gold covering."
+            items={banglesCollection}
+            columns={3}
+            tone="maroon"
+          />
+
+          <CollectionGallery
+            id="featured"
+            eyebrow="Featured"
+            title="Editor's Picks"
+            subtitle="A curated shelf of pieces our customers love most this season."
+            items={featuredProducts}
+            columns={4}
+          />
+
+          <CollectionGallery
+            id="new-arrivals"
+            eyebrow="Just In"
+            title="New Arrivals"
+            subtitle="Fresh designs added to the boutique this week."
+            items={newArrivalsCollection}
+            columns={4}
+            tone="maroon"
+          />
+
           <Testimonials />
           <InstagramGallery />
           <WhatsAppOrder />
