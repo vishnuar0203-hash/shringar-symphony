@@ -1,4 +1,5 @@
-import heroImg from "@/assets/hero-bride.jpg";
+import { heroImages } from "@/lib/images";
+const heroImg = heroImages.main;
 import { GoldParticles } from "./GoldParticles";
 import { ChevronDown } from "lucide-react";
 

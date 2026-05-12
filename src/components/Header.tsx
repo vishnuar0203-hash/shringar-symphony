@@ -7,8 +7,10 @@ const links = [
   { label: "Home", href: "#home" },
   { label: "Bridal", href: "#bridal" },
   { label: "Temple", href: "#temple" },
-  { label: "Trending", href: "#trending" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Necklaces", href: "#necklaces" },
+  { label: "Earrings", href: "#earrings" },
+  { label: "Bangles", href: "#bangles" },
+  { label: "New", href: "#new-arrivals" },
   { label: "Order", href: "#order" },
 ];
 

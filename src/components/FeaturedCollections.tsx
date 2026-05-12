@@ -1,32 +1,22 @@
-import bridal from "@/assets/collection-bridal.jpg";
-import temple from "@/assets/collection-temple.jpg";
-import bangles from "@/assets/collection-bangles.jpg";
-import earrings from "@/assets/collection-earrings.jpg";
+import { featuredCategories } from "@/lib/images";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
-
-const collections = [
-  { name: "Bridal", image: bridal, desc: "Heritage haram & necklace sets" },
-  { name: "Temple", image: temple, desc: "Sacred Lakshmi & Kemp designs" },
-  { name: "Gold Covering", image: bangles, desc: "Daily-wear elegance" },
-  { name: "Fashion", image: earrings, desc: "Statement jhumkas & more" },
-];
 
 export function FeaturedCollections() {
   return (
     <section id="collections" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="Featured Collections"
           title="Curated for Every Occasion"
           subtitle="From bridal grandeur to everyday luxury — explore our signature collections crafted with timeless South Indian artistry."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {collections.map((c, i) => (
+          {featuredCategories.map((c, i) => (
             <Reveal key={c.name} variant="up" delay={i * 120}>
               <a
-                href="#trending"
-                className="luxury-card group relative block overflow-hidden rounded-2xl"
+                href={c.href}
+                className="luxury-card group relative block h-full overflow-hidden rounded-2xl border border-border/50 shadow-luxury"
               >
                 <div className="product-img-wrap aspect-[3/4]">
                   <img src={c.image} alt={c.name} loading="lazy" className="h-full w-full object-cover" />
