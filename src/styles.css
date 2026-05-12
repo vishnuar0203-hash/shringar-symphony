@@ -37,6 +37,8 @@
   --color-champagne-light: var(--champagne-light);
   --color-beige: var(--beige);
   --color-gold: var(--gold);
+  --color-maroon: var(--maroon);
+  --color-maroon-deep: var(--maroon-deep);
 
   --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
@@ -53,6 +55,8 @@
   --champagne-light: oklch(0.9 0.08 90);
   --beige: oklch(0.88 0.04 75);
   --gold: oklch(0.78 0.15 80);
+  --maroon: oklch(0.32 0.12 25);
+  --maroon-deep: oklch(0.22 0.09 25);
 
   --background: oklch(0.18 0.025 50);
   --foreground: oklch(0.94 0.025 80);
@@ -85,6 +89,7 @@
   --gradient-gold: linear-gradient(135deg, oklch(0.78 0.15 80), oklch(0.9 0.08 90), oklch(0.78 0.15 80));
   --gradient-cocoa: linear-gradient(180deg, oklch(0.18 0.025 50), oklch(0.14 0.02 50));
   --gradient-radial-gold: radial-gradient(ellipse at center, oklch(0.82 0.12 85 / 0.25), transparent 70%);
+  --gradient-radial-maroon: radial-gradient(ellipse at center, oklch(0.32 0.12 25 / 0.55), transparent 75%);
 
   --shadow-luxury: 0 30px 80px -20px oklch(0 0 0 / 0.6), 0 0 0 1px oklch(0.82 0.12 85 / 0.1);
   --shadow-gold-glow: 0 0 60px oklch(0.82 0.12 85 / 0.4);
@@ -126,6 +131,10 @@
 
   .bg-radial-gold {
     background: var(--gradient-radial-gold);
+  }
+
+  .bg-radial-maroon {
+    background: var(--gradient-radial-maroon);
   }
 
   .shadow-luxury {
