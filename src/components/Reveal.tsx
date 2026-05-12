@@ -14,7 +14,7 @@ export function Reveal({
   variant?: Variant;
   delay?: number;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }) {
   const ref = useReveal<HTMLDivElement>();
   const style: CSSProperties = { transitionDelay: `${delay}ms` };
