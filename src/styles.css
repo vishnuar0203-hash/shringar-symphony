@@ -133,6 +133,10 @@
     background: var(--gradient-radial-gold);
   }
 
+  .bg-radial-maroon {
+    background: var(--gradient-radial-maroon);
+  }
+
   .shadow-luxury {
     box-shadow: var(--shadow-luxury);
   }
