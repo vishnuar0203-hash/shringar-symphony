@@ -1,6 +1,7 @@
 import { products } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 export function TrendingJewellery() {
   const trending = products.slice(0, 8);
@@ -13,11 +14,14 @@ export function TrendingJewellery() {
           subtitle="Best-selling pieces this season — handpicked for their craft, glow and grace."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {trending.map((p) => (
-            <ProductCard key={p.id} product={p} />
+          {trending.map((p, i) => (
+            <Reveal key={p.id} variant="up" delay={i * 90}>
+              <ProductCard product={p} />
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
   );
 }
+

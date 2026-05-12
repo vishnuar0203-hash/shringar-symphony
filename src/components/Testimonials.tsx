@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 const reviews = [
   {
@@ -29,22 +30,21 @@ export function Testimonials() {
           subtitle="A few stories from our beautiful customers across South India."
         />
         <div className="grid gap-6 md:grid-cols-3">
-          {reviews.map((r) => (
-            <article
-              key={r.name}
-              className="luxury-card relative rounded-2xl border border-border/50 bg-card p-8"
-            >
-              <div className="mb-4 flex gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={14} className="fill-champagne text-champagne" />
-                ))}
-              </div>
-              <p className="mb-6 italic text-foreground/85">"{r.text}"</p>
-              <div className="border-t border-border/50 pt-4">
-                <p className="font-display text-lg text-champagne">{r.name}</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{r.city}</p>
-              </div>
-            </article>
+          {reviews.map((r, i) => (
+            <Reveal key={r.name} variant="up" delay={i * 140}>
+              <article className="luxury-card relative h-full rounded-2xl border border-border/50 bg-card p-8">
+                <div className="mb-4 flex gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={14} className="fill-champagne text-champagne" />
+                  ))}
+                </div>
+                <p className="mb-6 italic text-foreground/85">"{r.text}"</p>
+                <div className="border-t border-border/50 pt-4">
+                  <p className="font-display text-lg text-champagne">{r.name}</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{r.city}</p>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>
